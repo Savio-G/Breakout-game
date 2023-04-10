@@ -4,12 +4,18 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: antiquewhite;
+}
+
 .grid {
+    margin-left: 500px;
+
     position: absolute;
     width: 560px;
     height: 300px;
-    border: solid 1px black;
-    margin-top: 100px;
+    border: solid 2px black;
+    /* margin-top: 200px; */
 
 }
 
@@ -17,7 +23,7 @@
     position: absolute;
     width: 100px;
     height: 20px;
-    background-color: blue;
+    background-color: navy;
 }
 
 .user {
@@ -32,5 +38,10 @@
     width: 20px;
     height: 20px;
     border-radius: 10px;
-    background-color: red;
+    background-color: brown;
+}
+
+.score {
+    margin-left: 500px;
+    margin-top: 200px;
 }
