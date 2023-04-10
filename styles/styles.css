@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid {
+    min-width: 100vw;
+    min-height: 100vh;
+    border: 10px solid burlywood;
+    position: absolute;
+}
+
+.block {
+    height: 5vh;
+    width: 20vh;
+    background-color: navy;
+    position: absolute;
+}
+
+.user {
+    height: 5vh;
+    width: 20vh;
+    background-color: purple;
+    position: absolute;
+
+}
