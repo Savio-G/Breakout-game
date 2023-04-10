@@ -5,31 +5,32 @@
 }
 
 .grid {
-    min-width: 50vw;
-    min-height: 50vh;
-    border: 10px solid burlywood;
     position: absolute;
+    width: 560px;
+    height: 300px;
+    border: solid 1px black;
     margin-top: 100px;
+
 }
 
 .block {
-    height: 5vh;
-    width: 20vh;
-    background-color: navy;
     position: absolute;
+    width: 100px;
+    height: 20px;
+    background-color: blue;
 }
 
 .user {
-    height: 2vh;
-    width: 15vh;
-    background-color: purple;
     position: absolute;
+    width: 100px;
+    height: 20px;
+    background-color: blueviolet;
 }
 
 .ball {
-    height: 2vh;
-    width: 2vh;
-    border-radius: 50%;
-    background-color: burlywood;
     position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: red;
 }
