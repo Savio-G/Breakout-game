@@ -1,11 +1,18 @@
 const grid = document.querySelector('.grid')
-let containerWidth = 175;
+let containerWidth = 179;
 let blockHeight = 5;
 let blockWidth = 20;
+let ballDiam = 2
+let xDirection = 0.5;
+let yDirection = 0.5;
+let timerID;
 
-// User Position
-const currentPosition = [90, 5]
-const userPosition = currentPosition
+
+// User and ball Position
+const currentPosition = [90, 2]
+const ballPosition = [95, 4]
+
+
 // Template to position the blocks
 class Block {
     constructor(xAxis, yAxis) {
@@ -76,9 +83,16 @@ function createBlocks() {
 
 }
 createBlocks()
+
+// User and ball position function
 function pointUser() {
     user.style.left = currentPosition[0] + 'vh'
     user.style.bottom = currentPosition[1] + 'vh'
+}
+
+function pointBall() {
+    ballEl.style.left = ballPosition[0] + 'vh'
+    ballEl.style.bottom = ballPosition[1] + 'vh'
 }
 // position user
 const user = document.createElement('div')
@@ -99,8 +113,36 @@ function moveUser(e) {
             if (currentPosition[0] < containerWidth) {
                 pointUser()
                 currentPosition[0] += 1
+                break
             }
     }
 }
 
 document.addEventListener('keydown', moveUser)
+
+// Create and add the ball
+const ballEl = document.createElement('div')
+ballEl.classList.add('ball')
+pointBall()
+
+grid.appendChild(ballEl)
+
+// Moving the ball
+function moveBall() {
+    ballPosition[0] += xDirection
+    ballPosition[1] += yDirection
+    pointBall()
+}
+
+timerID = setInterval(moveBall, 30)
+function checkCollision() {
+    if (ballPosition[0] > containerWidth - ballDiam) {
+        changePosition()
+    }
+}
+function changePosition() {
+    if (xDirection === 0.5 && yDirection === 0.5) {
+        xDirection = -0.5
+
+    }
+}

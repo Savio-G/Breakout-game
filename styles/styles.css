@@ -5,10 +5,11 @@
 }
 
 .grid {
-    min-width: 100vw;
-    min-height: 100vh;
+    min-width: 50vw;
+    min-height: 50vh;
     border: 10px solid burlywood;
     position: absolute;
+    margin-top: 100px;
 }
 
 .block {
@@ -19,9 +20,16 @@
 }
 
 .user {
-    height: 5vh;
-    width: 20vh;
+    height: 2vh;
+    width: 15vh;
     background-color: purple;
     position: absolute;
+}
 
+.ball {
+    height: 2vh;
+    width: 2vh;
+    border-radius: 50%;
+    background-color: burlywood;
+    position: absolute;
 }
